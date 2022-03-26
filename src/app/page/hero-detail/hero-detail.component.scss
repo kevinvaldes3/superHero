@@ -1,0 +1,186 @@
+.header {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+  height: 85px;
+  background-color: #496b6b;
+  flex-wrap: wrap;
+}
+
+.container-fluid{
+  display: flex, inline-block;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  width: 90%;
+  height: 100%;
+  padding: 20px;
+  max-width: 1980px;
+  min-width: 720px;
+  background-color: none;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-block: 10px;
+  align-items: center;
+}
+
+.footer {
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  color: white;
+  display: none;
+  justify-content: center;
+  align-content: flex-end;
+  flex-wrap: wrap;
+}
+
+h1{
+  font-family: 'Kanit', sans-serif;
+  font-weight: 500;
+}
+.buscador{
+  padding: 5px;
+  float: right;
+}
+
+.titulo{
+  float: left;
+}
+
+.buscador input{
+  width: 240px;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 18px;
+  color: black;
+  outline: none;
+  border: 1px solid silver;
+  border-radius: 30px;
+}
+
+.btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #305050;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.btn i {
+  align-items: center;
+  margin: 5px;
+  padding: 1px;
+  margin-bottom: 5px;
+}
+
+.card-hero:hover {
+  max-width: 400px;
+}
+
+.buscador{
+  position:static;
+  float: right;
+}
+
+.icon-image-avatar {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
+
+.imagenHeroeXl{
+  margin-top: 1%;
+  position: relative;
+  float: left;
+  max-width: 1000px;
+  min-width: 360px;
+  border-radius: 30px;
+  box-shadow: 0 0 20px 2px rgba(0,0,0,.1);
+}
+
+.infoHeroe{
+  position: flex;
+  margin-top: 30px;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 0 20px 2px rgba(0,0,0,1);
+  transition: 1s;
+}
+
+.heroInfo{
+  margin-top: 5%;
+  text-align: center;
+  justify-content: center;
+}
+
+
+
+.heroe{
+  width: 250px;
+  box-shadow: 0 0 20px 2px rgba(0,0,0,.1);
+  transition: 1s;
+  border-radius: 30px;
+  padding: 5px;
+  
+}
+
+.heroe img{
+  display: block;
+  width: 100%;
+  border-radius: 30px;
+}
+
+.imagenHeroe{
+  display: block;
+  width: 100%;
+}
+
+.imageOverlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-family:sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+  text-align: center;
+  padding: 5px;
+  word-wrap: normal;
+}
+
+.imageOverlay:hover{
+  opacity: 1;
+  //background: url({{ items.images.md }});
+}
+
+.textoImagen{
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.heroe:hover{
+transform: scale(2.1);
+z-index: 2;
+cursor: pointer;
+}
+
+.columnaHero{
+  display: flex;
+}
