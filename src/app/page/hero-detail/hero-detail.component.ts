@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef, ViewChild, Input } from '@angular/core';
 import { HeroesService } from '../../services/heroes.service';
 
 @Component({
@@ -13,6 +13,8 @@ export class HeroDetailComponent implements OnInit {
   buscadorInput: string = "";
   veinte = 20
   numero: number = 20;
+  @Input() inputChange = '';
+  @ViewChild('scroll') Scroll: ElementRef | any;
   constructor(
     public json: HeroesService
   ) {
@@ -21,6 +23,8 @@ export class HeroDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.mostrar()
+
+
   }
 
   mostrar() {
@@ -28,6 +32,7 @@ export class HeroDetailComponent implements OnInit {
     this.json.getJson('https://akabab.github.io/superhero-api/api/all.json').subscribe((res: any) => {
       var id: any = [];
       this.lista = [];
+      this.buscadorInput = "";
       res.forEach((item: any) => {
         id.push(Math.floor(Math.random() * res.length))
       })
@@ -40,7 +45,6 @@ export class HeroDetailComponent implements OnInit {
           this.lista.push(item)
         }
       })
-      console.log(this.numero);
 
       if (this.numero > 19) {
         if (this.lista.length = this.numero) {
@@ -55,7 +59,7 @@ export class HeroDetailComponent implements OnInit {
 
 
     })
-
+    //this.scroltop()
 
   }
 
@@ -68,10 +72,12 @@ export class HeroDetailComponent implements OnInit {
   onHover(data: any) {
     this.listaMostrar = [];
     this.listaMostrar.push(data)
+    this.scroltop();
   }
 
   quitar() {
     this.listaMostrar = [];
+    this.scroltop()
   }
 
 
@@ -80,6 +86,35 @@ export class HeroDetailComponent implements OnInit {
   //espera un numero como respuesta
   accionOperacion(valor: number) {
     this.numero += valor
+  }
+
+  scroltop() {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  buscardores() {
+    this.buscadorInput = this.buscadorInput.toLocaleLowerCase()
+    if (this.buscadorInput) {
+      this.json.getJson('https://akabab.github.io/superhero-api/api/all.json').subscribe((res: any) => {
+        var id: any = [];
+        this.lista = [];
+        var listaRes: any;
+        for (const post of res) {
+          if (post.name.toLowerCase().indexOf(this.buscadorInput) > -1) {
+            console.log(post);
+            this.lista.push(post)
+          }
+        }
+      });
+    } else {
+      this.mostrar()
+      this
+    }
+
   }
 }
 

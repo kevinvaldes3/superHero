@@ -1,12 +1,42 @@
+body{
+  background: #5e636e;
+  //background: -prefix-linear-gradient(top, blue, white);
+  //background-image: url("https://previews.123rf.com/images/annagolant/annagolant1802/annagolant180201293/95296847-patr%C3%B3n-de-semitono-futurista-abstracto-fondo-c%C3%B3mico-fondo-punteado-con-c%C3%ADrculos-puntos-punto-a-peque.jpg");
+  background-size: 100% 100%;
+}
+.container-main{
+  background: #5e636e;
+  //background: -prefix-linear-gradient(top, blue, white);
+  //background-image: url("https://previews.123rf.com/images/annagolant/annagolant1802/annagolant180201293/95296847-patr%C3%B3n-de-semitono-futurista-abstracto-fondo-c%C3%B3mico-fondo-punteado-con-c%C3%ADrculos-puntos-punto-a-peque.jpg");
+  background-size:  100% 100%;
+}
+
 .header {
   display: flex;
-  align-content: center;
+  align-content: flex-start;
   justify-content: center;
   width: 100%;
-  height: 85px;
-  background-color: #496b6b;
+  height: 3.2em;
+  background-image:url('https://i.ytimg.com/vi/ouE-_pfXN_U/maxresdefault.jpg');
+  background-color: #e58a1e;
+  background-repeat:no-repeat;  
+  background-size: 100% 35px;
+  background-position: center;
   flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
 }
+
+.titleStyle{
+  display: flex;
+  justify-content: center;
+}
+
+.titleStyle h1{
+  font-weight: bold;
+color: #000;
+}
+
 
 .container-fluid {
   display: flex, inline-block;
@@ -72,7 +102,7 @@ label {
   //position: absolute;
   top: 0;
   right: 0;
-  background: #305050;
+  background: #e58a1e;
   width: 55px;
   height: 55px;
   line-height: 55px;
@@ -80,8 +110,9 @@ label {
   color: white;
   font-size: 20px;
   border-radius: 30px;
-  cursor: pointer;
+  cursor: pointer;  
 }
+
 .btn i {
   align-items: center;
   margin: 5px;
@@ -104,10 +135,10 @@ label {
 }
 
 .imagenHeroeXl {
-  margin-top: 5%;
+  margin-top: 0%;
   position: relative;
-  float: left;
-  height: 60vh;
+  //float: left;
+  //height: 60vh;
   max-width: 1000px;
   min-width: 360px;
 }
@@ -115,6 +146,7 @@ label {
 .infoHeroe {
   position: flex;
   margin-top: 30px;
+  width: 19%;
   justify-content: center;
   text-align: center;
   padding: 20px;
@@ -140,16 +172,17 @@ label {
 
 img {
   width: 100%;
-  height: 100%;
-  overflow: hidden;
+  //height: 100%;
+  //overflow: hidden;
 }
 
 .heroInfo {
+  background-image: url("https://media.istockphoto.com/vectors/pop-art-dots-background-geometric-vintage-monochrome-fade-wallpaper-vector-id1292834135?k=20&m=1292834135&s=612x612&w=0&h=-4SkpjQJmaADPaQolA_jWWlYLADpCFLKJCA8cQbxlGU=");
   justify-content: center;
   background-color: lightgrey;
   padding: 18px;
   border-radius: 10px;
-  box-shadow: 0 5px 10px rgb(0 0 0 / 50%);
+  box-shadow: 0 17px 15px rgb(0 0 0 / 44%);
   width: 487px;
 }
 
@@ -174,7 +207,7 @@ img {
   margin-left: 15px;
   width: 90%;
   justify-content: center;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  //box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
   transition: 1s;
   border-radius: 10px;
   padding: 0 20px;
@@ -210,6 +243,7 @@ img {
   transition: 1s;
   border-radius: 30px;
   padding: 5px;
+  box-shadow: 0 0 20px 6px black;
 }
 
 .heroe img {
@@ -271,7 +305,14 @@ img {
   width: 100%;
   display: block;
   background-color: #305050;
-  color: aliceblue;
+  color: #101111;
+  background-image:url('https://i.ytimg.com/vi/ouE-_pfXN_U/maxresdefault.jpg');
+  background-repeat:no-repeat;  
+  background-size: 100% 35px;
+  background-position: center;
+  font-weight: bold;
+  font-size: 19px;
+  box-shadow: 0 0 20px 6px black;
 }
 
 .botonDeleted button {
@@ -279,10 +320,15 @@ img {
   text-align: center;
   position: flex;
   margin-top: 2%;
-  width: 60%;
+  width:  17%;
   display: block;
   background-color: #496b6b;
-  color: aliceblue;
+  color: rgb(14, 15, 15);
+  background-image:url('https://previews.123rf.com/images/annagolant/annagolant1707/annagolant170700313/82363566-modello-mezzitoni-sfondo-comico-sfondo-retr%C3%B2-punteggiato-con-cerchi-puntini-elemento-di-progettazion.jpg');
+  background-repeat:no-repeat;  
+  background-size: 209px  46px;
+  background-position:center;
+  box-shadow: 0 0 20px 6px black;  
 }
 
 .botonDeleted {
@@ -300,17 +346,40 @@ h6 {
   font-size: 34px;
   font-weight: bold;
   display: contents;
+  
 }
 .bi:hover {
-  color: #333;
+  color: #000;
+  font-weight: bold;
 }
 
 span {
-  color: #333;
+  color: #000;
   font-weight: 600;
   padding: 0px 15px;
 }
 
 .container-button {
   margin-bottom: 7px;
+  
+}
+
+.btn .btn-danger{
+  //background-image:url('');
+  background-image:url('https://i.ytimg.com/vi/ouE-_pfXN_U/maxresdefault.jpg');
+  background-color: #e58a1e;
+  background-repeat:no-repeat;  
+  background-size: 100% 35px;
+}
+
+.btn .btn-primary{
+   background-image:url('https://i.ytimg.com/vi/ouE-_pfXN_U/maxresdefault.jpg');
+  background-color: #e58a1e;
+  background-repeat:no-repeat;  
+  background-size: 100% 35px;
+}
+
+.scroll-ele{
+  height: 10px;
+  overflow-y: scroll;
 }
