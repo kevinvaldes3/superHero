@@ -13,11 +13,17 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { HeroesService } from './services/heroes.service';
 import { ObjToArrayPipe } from './objetToArry.pipe';
+import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './filterPost.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeroDetailComponent,
-    ObjToArrayPipe
+    ObjToArrayPipe,
+    FilterPipe
+   
      
   ],
   imports: [
@@ -28,7 +34,9 @@ import { ObjToArrayPipe } from './objetToArry.pipe';
     MatButtonModule,
     HttpClientModule,
     MatIconModule,
-    MatGridListModule
+    MatGridListModule,
+    MatInputModule,
+    FormsModule
 
     
   ],
