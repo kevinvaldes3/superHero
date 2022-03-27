@@ -1,0 +1,385 @@
+body{
+  background: #5e636e;
+  //background: -prefix-linear-gradient(top, blue, white);
+  //background-image: url("https://previews.123rf.com/images/annagolant/annagolant1802/annagolant180201293/95296847-patr%C3%B3n-de-semitono-futurista-abstracto-fondo-c%C3%B3mico-fondo-punteado-con-c%C3%ADrculos-puntos-punto-a-peque.jpg");
+  background-size: 100% 100%;
+}
+.container-main{
+  background: #5e636e;
+  //background: -prefix-linear-gradient(top, blue, white);
+  //background-image: url("https://previews.123rf.com/images/annagolant/annagolant1802/annagolant180201293/95296847-patr%C3%B3n-de-semitono-futurista-abstracto-fondo-c%C3%B3mico-fondo-punteado-con-c%C3%ADrculos-puntos-punto-a-peque.jpg");
+  background-size:  100% 100%;
+}
+
+.header {
+  display: flex;
+  align-content: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 3.2em;
+  background-image:url('https://i.ytimg.com/vi/ouE-_pfXN_U/maxresdefault.jpg');
+  background-color: #e58a1e;
+  background-repeat:no-repeat;  
+  background-size: 100% 35px;
+  background-position: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
+
+.titleStyle{
+  display: flex;
+  justify-content: center;
+}
+
+.titleStyle h1{
+  font-weight: bold;
+color: #000;
+}
+
+
+.container-fluid {
+  display: flex, inline-block;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  width: 83%;
+  height: 100%;
+  padding: 5px;
+  max-width: 1980px;
+  min-width: 720px;
+  background-color: none;
+  flex-wrap: wrap;
+  align-content: center;
+  margin-block: 10px;
+  align-items: center;
+}
+
+.footer {
+  background-color: black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  color: white;
+  display: none;
+  justify-content: center;
+  align-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.header col {
+  width: 100%;
+}
+
+label {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+}
+.buscador {
+  padding: 5px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.titulo {
+  float: left;
+  font-size: 60px;
+}
+
+.buscador input {
+  width: 240px;
+  height: 40px;
+  padding: 0 20px;
+  font-size: 18px;
+  color: black;
+  outline: none;
+  border: 1px solid silver;
+  border-radius: 30px;
+}
+
+.btn {
+  //position: absolute;
+  top: 0;
+  right: 0;
+  background: #e58a1e;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  border-radius: 30px;
+  cursor: pointer;  
+}
+
+.btn i {
+  align-items: center;
+  margin: 5px;
+  padding: 1px;
+  margin-bottom: 5px;
+}
+
+.card-hero:hover {
+  max-width: 400px;
+}
+
+.buscador {
+  position: static;
+  float: right;
+}
+
+.icon-image-avatar {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
+
+.imagenHeroeXl {
+  margin-top: 0%;
+  position: relative;
+  //float: left;
+  //height: 60vh;
+  max-width: 1000px;
+  min-width: 360px;
+}
+
+.infoHeroe {
+  position: flex;
+  margin-top: 30px;
+  width: 19%;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 1);
+  transition: 1s;
+}
+
+.imagenHeroeXl figure {
+  max-width: 600px;
+  max-height: 800px;
+  min-width: 100px;
+  min-height: 300px;
+  justify-content: center;
+  align-items: center;
+  image-rendering: auto;
+  image-resolution: initial;
+  position: relative;
+  transition: all 500ms ease-out;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 1);
+}
+
+img {
+  width: 100%;
+  //height: 100%;
+  //overflow: hidden;
+}
+
+.heroInfo {
+  background-image: url("https://media.istockphoto.com/vectors/pop-art-dots-background-geometric-vintage-monochrome-fade-wallpaper-vector-id1292834135?k=20&m=1292834135&s=612x612&w=0&h=-4SkpjQJmaADPaQolA_jWWlYLADpCFLKJCA8cQbxlGU=");
+  justify-content: center;
+  background-color: lightgrey;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 17px 15px rgb(0 0 0 / 44%);
+  width: 487px;
+}
+
+.infoHeroe {
+  position: flex;
+  margin: 5px;
+  width: 90%;
+  justify-content: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  transition: 1s;
+  border-radius: 10px;
+  padding: 0 20px;
+  font-size: 20px;
+  color: black;
+  outline: none;
+  background-color: white;
+  border: 1px solid silver;
+}
+.statsHeroe {
+  position: flex;
+  margin: 5px;
+  margin-left: 15px;
+  width: 90%;
+  justify-content: center;
+  //box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  transition: 1s;
+  border-radius: 10px;
+  padding: 0 20px;
+  font-size: 20px;
+  color: black;
+  outline: none;
+  background-color: white;
+  border: 1px solid silver;
+  word-wrap: break-word;
+}
+
+.enunciadoHeroe {
+  text-align: center;
+  position: flex;
+  margin: 5px;
+  width: 100%;
+  justify-content: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  transition: 1s;
+  border-radius: 10px;
+  padding: 0 20px;
+  font-size: 25px;
+  color: black;
+  outline: none;
+  background-color: white;
+  border: 1px solid silver;
+  font-weight: bold;
+}
+
+.heroe {
+  width: 250px;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.1);
+  transition: 1s;
+  border-radius: 30px;
+  padding: 5px;
+  box-shadow: 0 0 20px 6px black;
+}
+
+.heroe img {
+  display: block;
+  width: 100%;
+  border-radius: 30px;
+}
+
+.imagenHeroe {
+  display: block;
+  width: 100%;
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+  text-align: center;
+  padding: 5px;
+  word-wrap: normal;
+}
+
+.imageOverlay:hover {
+  opacity: 1;
+  //background: url({{ items.images.md }});
+}
+
+.textoImagen {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.heroe:hover {
+  transform: scale(2.1);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.columnaHero {
+  display: flex;
+}
+
+.botonRandom button {
+  justify-content: center;
+  text-align: center;
+  position: flex;
+  margin-top: 2%;
+  width: 100%;
+  display: block;
+  background-color: #305050;
+  color: #101111;
+  background-image:url('https://i.ytimg.com/vi/ouE-_pfXN_U/maxresdefault.jpg');
+  background-repeat:no-repeat;  
+  background-size: 100% 35px;
+  background-position: center;
+  font-weight: bold;
+  font-size: 19px;
+  box-shadow: 0 0 20px 6px black;
+}
+
+.botonDeleted button {
+  justify-content: center;
+  text-align: center;
+  position: flex;
+  margin-top: 2%;
+  width:  17%;
+  display: block;
+  background-color: #496b6b;
+  color: rgb(14, 15, 15);
+  background-image:url('https://previews.123rf.com/images/annagolant/annagolant1707/annagolant170700313/82363566-modello-mezzitoni-sfondo-comico-sfondo-retr%C3%B2-punteggiato-con-cerchi-puntini-elemento-di-progettazion.jpg');
+  background-repeat:no-repeat;  
+  background-size: 209px  46px;
+  background-position:center;
+  box-shadow: 0 0 20px 6px black;  
+}
+
+.botonDeleted {
+  align-items: center;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+h6 {
+  color: #fff;
+}
+
+.bi {
+  font-size: 34px;
+  font-weight: bold;
+  display: contents;
+  
+}
+.bi:hover {
+  color: #000;
+  font-weight: bold;
+}
+
+span {
+  color: #000;
+  font-weight: 600;
+  padding: 0px 15px;
+}
+
+.container-button {
+  margin-bottom: 7px;
+  
+}
+
+.btn .btn-danger{
+  //background-image:url('');
+  background-image:url('https://i.ytimg.com/vi/ouE-_pfXN_U/maxresdefault.jpg');
+  background-color: #e58a1e;
+  background-repeat:no-repeat;  
+  background-size: 100% 35px;
+}
+
+.btn .btn-primary{
+   background-image:url('https://i.ytimg.com/vi/ouE-_pfXN_U/maxresdefault.jpg');
+  background-color: #e58a1e;
+  background-repeat:no-repeat;  
+  background-size: 100% 35px;
+}
+
+.scroll-ele{
+  height: 10px;
+  overflow-y: scroll;
+}

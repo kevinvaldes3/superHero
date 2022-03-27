@@ -1,0 +1,232 @@
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,200;1,600&display=swap');
+  </style>
+</head>
+
+<body>
+  
+  <div class="container-main">
+    <div class="header">
+      <div class="col"></div>
+      <div class="col titleStyle">
+        <h1>Heroes</h1>
+      </div>
+      <div class="col">
+        <div class="buscador">
+          <div class="input-group input-group-sm mb-3">
+            <input type="text" #inputChange id="searchInput" class="form-control" name="buscadorInput" placeholder="Search"
+              aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" [(ngModel)]="buscadorInput" (change)="buscardores()">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-ele" #scroll></div>
+    <div class="container-fluid">
+      <div class="row" *ngFor="let items of  listaMostrar ">
+        <div class="col">
+          <div class="imagenHeroeXl">
+            <figure style="width: 89.1%">
+              <img src="{{ items.images.lg }}" class="img-fluid" alt="{{ items.name}}">
+            </figure>
+          </div>
+        </div>
+        <div class="col">
+          <div class="heroInfo">
+            <div class="row">
+              <div class="col">
+                <div class="enunciadoHeroe">
+                  <label for="floatingInputGrid">{{items.name}}</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="enunciadoHeroe">
+                  <label for="floatingInputGrid">Power Stats:</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="row">
+                  <div class="statsHeroe">
+                    <label for="floatingInputGrid">Intelligence = </label>
+                    <label for="floatingInputGrid">{{items.powerstats.intelligence}}</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="statsHeroe">
+                    <label for="floatingInputGrid">Strength = </label>
+                    <label for="floatingInputGrid">{{items.powerstats.strength}}</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <div class="statsHeroe">
+                    <label for="floatingInputGrid">Speed = </label>
+                    <label for="floatingInputGrid">{{items.powerstats.speed}}</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="statsHeroe">
+                    <label for="floatingInputGrid">Durability = </label>
+                    <label for="floatingInputGrid">{{items.powerstats.durability}}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="row">
+                  <div class="statsHeroe">
+                    <label for="floatingInputGrid">Power = </label>
+                    <label for="floatingInputGrid"> {{items.powerstats.power}}</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <div class="statsHeroe">
+                    <label for="floatingInputGrid">Combat = </label>
+                    <label for="floatingInputGrid"> {{items.powerstats.combat}}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="enunciadoHeroe">
+                  <label for="floatingInputGrid">Appareance:</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="statsHeroe">
+                  <label for="floatingInputGrid">Gender = </label>
+                  <label for="floatingInputGrid">{{items.appearance.gender}}</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="statsHeroe">
+                  <label for="floatingInputGrid">Race = </label>
+                  <label for="floatingInputGrid">{{items.appearance.race}}</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="enunciadoHeroe">
+                  <label for="floatingInputGrid">Biography:</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="row">
+                  <div class="statsHeroe">
+                    <label for="floatingInputGrid">Full name = </label>
+                    <label for="floatingInputGrid">{{items.biography.fullName}}</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="statsHeroe">
+                    <label for="floatingInputGrid">Alters= </label>
+                    <label for="floatingInputGrid">{{items.biography.alterEgos}}</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <div class="statsHeroe">
+                    <label for="floatingInputGrid">Aliases = </label>
+                    <label for="floatingInputGrid">{{items.biography.aliases}}</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="statsHeroe">
+                    <label for="floatingInputGrid">Place of Birth = </label>
+                    <label for="floatingInputGrid">{{items.biography.placeOfBirth}}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="row">
+                  <div class="statsHeroe">
+                    <label for="floatingInputGrid">First appearance = </label>
+                    <label for="floatingInputGrid"> {{items.biography.firstAppearance}}</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="row">
+                  <div class="statsHeroe">
+                    <label for="floatingInputGrid">Publisher = </label>
+                    <label for="floatingInputGrid"> {{items.biography.publisher}}</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <div class="enunciadoHeroe">
+                  <label for="floatingInputGrid">Alignment = </label>
+                  <label for="floatingInputGrid"> {{items.biography.alignment}}</label>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="botonDeleted">
+            <button mat-raised-button (click)="quitar()">Hide detail card</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="text-center ">
+          <div class="row text-center container-button">
+            <div class="col-md-12 col- ">
+              <button (click)="accionOperacion( -10 );mostrar() " class="btn btn-danger bmd-btn-fab bmd-btn-fab-sm"
+                style="width: 58px;">
+                <i class="bi bi-dash"></i>
+              </button>
+              <span> {{ numero }} </span>
+              <button (click)="accionOperacion( +10 );mostrar() " class="btn btn-primary bmd-btn-fab bmd-btn-fab-sm"
+                style="width: 58px;">
+                <i class="bi bi-plus"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <mat-grid-list class="poolHeroes" cols="10" rowHeight="1.4:2">
+          <div *ngFor="let items of  lista ">
+            <mat-grid-tile class="heroe" >
+              <div class="imagenHeroe">
+                <img src="{{ items.images.sm }}" class="figure-img img-fluid rounded" alt="{{ items.name }}">
+              </div>
+              <div class="imageOverlay" (click)="onHover(items)">
+                <div class="textoImagen">{{ items.name }}</div>
+              </div>
+            </mat-grid-tile>
+          </div>
+        </mat-grid-list>
+      </div>
+      <div class="row">
+        <div class="botonRandom">
+          <button mat-raised-button (click)="mostrar()">Randomize</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

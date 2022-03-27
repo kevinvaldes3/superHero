@@ -6,6 +6,7 @@
     "superHero": {
       "projectType": "application",
       "schematics": {
+        
         "@schematics/angular:component": {
           "style": "scss"
         },
@@ -84,6 +85,7 @@
               "browserTarget": "superHero:build:development"
             }
           },
+           
           "defaultConfiguration": "development"
         },
         "extract-i18n": {
@@ -110,6 +112,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
